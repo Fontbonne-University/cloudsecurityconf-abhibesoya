@@ -29,6 +29,20 @@ class RegistrationController {
         return "admin";
     }
 
+    @RequestMapping("/ver")
+    @ResponseBody
+    String getVersion ()
+    {
+        return "ver 2.0";
+    }
+
+
+    @RequestMapping("/Landing")
+    String getLanding()
+    {
+        return "Landing";
+    }
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String conference(Model model) {
         model.addAttribute("attendee", new Attendee());
